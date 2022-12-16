@@ -1,4 +1,4 @@
-# [Unrated] 타노스 - 15802 
+# [번외] 타노스 - 15802 
 
 [문제 링크](https://www.acmicpc.net/problem/15802) 
 
