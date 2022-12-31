@@ -1,24 +1,10 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
+from itertools import combinations_with_replacement
 
 n, m = map(int,input().split())
 a = list(map(int,input().split()))
 a.sort()
-b=[]
 
-def f(start):
-    if len(b) < m:
-        for i in a:
-            if len(b) != 0:
-                if i >= b[-1]:
-                    b.append(i)
-                    f(i)
-                    b.pop()
-            else:
-                b.append(i)
-                f(i)
-                b.pop()
-    else:
-        print(*b)
-
-f(a[0])
+for i in combinations_with_replacement(a, m):
+    print(*i)
