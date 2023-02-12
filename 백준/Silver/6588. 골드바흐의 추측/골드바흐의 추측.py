@@ -25,3 +25,4 @@ while(True):
             sys.stdout.write("{} = {} + {}\n".format(i,a,i-a))
 
             break
+            
