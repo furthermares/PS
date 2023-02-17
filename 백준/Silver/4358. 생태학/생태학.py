@@ -14,10 +14,8 @@ while True:
 		
 	d[tree] += 1
 	total += 1
+	
+d = sorted(d.items(), key = lambda x:x[0])
 
-#testing
-d2 = list(d.keys())
-d2.sort()
-
-for a in d2:
-	print("%s %.4f" %(a, d[a]*100/total))
+for k, v in d:
+	print("%s %.4f" %(k, v*100/total))
