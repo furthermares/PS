@@ -1,6 +1,5 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
-from itertools import combinations
 
 N, M, V = map(int,input().split())
 graph=[[] for _ in range(N+1)]
