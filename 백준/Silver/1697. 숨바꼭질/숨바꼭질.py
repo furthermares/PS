@@ -14,9 +14,8 @@ def bfs():
         for next in [prev-1,prev+1,prev*2]:
             if 0 <= next < MAX:
                 if not visited[next]:
-                    if visited[next] < visited[prev] + 1:
-                        q.append(next)
-                        visited[next] = visited[prev] + 1
+                    q.append(next)
+                    visited[next] = visited[prev] + 1
 
 bfs()
 print(visited[K] - 1)
