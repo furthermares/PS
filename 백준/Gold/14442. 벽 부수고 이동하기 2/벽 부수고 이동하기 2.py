@@ -1,33 +1,32 @@
-#TESTING
 import sys
+def input(): return sys.stdin.readline().rstrip()
 from collections import deque
-input = sys.stdin.readline
 
-dx = [-1,1,0,0]
-dy = [0,0,-1,1]
+N, M, K = map(int, input().split())
+graph = [list(map(int, input())) for _ in range(N)]
 
-def bfs(start,K):
-    visited = [[[-1] * C for _ in range(R)] for _ in range(K+1)]
-    queue = deque()
-    queue.append([0] + start)
-    answer = R+C+1
-    visited[0][start[0]][start[1]] = 0
-    while queue:
-        break_cnt, x, y = queue.popleft()
-        if x == R-1 and y == C-1:
-            return visited[break_cnt][x][y]+1
+visited = [[[0] * M for _ in range(N)] for _ in range(K+1)]
+visited[0][0][0] = 1
+
+dx, dy = [-1,1,0,0], [0,0,-1,1]
+
+def bfs():
+    q = deque([(0,0,0)])
+    while q:
+        z,x,y = q.popleft()
+        
+        if x == N-1 and y == M-1:
+            return visited[z][x][y]
+        
         for i in range(4):
-            ax = x + dx[i]
-            ay = y + dy[i]
-            if 0 <= ax < R and 0 <= ay < C:
-                if board[ax][ay] == 1 and break_cnt < K and visited[break_cnt + 1][ax][ay] == -1 :
-                    queue.append([break_cnt+1,ax,ay])
-                    visited[break_cnt+1][ax][ay] = visited[break_cnt][x][y] + 1
-                elif board[ax][ay] == 0 and visited[break_cnt][ax][ay] == -1:
-                    queue.append([break_cnt,ax,ay])
-                    visited[break_cnt][ax][ay] = visited[break_cnt][x][y] + 1
+            nx, ny = x + dx[i], y + dy[i]
+            if 0 <= nx < N and 0 <= ny < M:
+                if graph[nx][ny] == 1 and z < K and not visited[z+1][nx][ny]:
+                    q.append((z+1, nx, ny))
+                    visited[z+1][nx][ny] = visited[z][x][y] + 1
+                elif graph[nx][ny] == 0 and not visited[z][nx][ny]:
+                    q.append((z, nx, ny))
+                    visited[z][nx][ny] = visited[z][x][y] + 1
     return -1
-R,C,K = map(int,input().split())
-board = [list(map(int,input().strip())) for _ in range(R)]
 
-print(bfs([0,0],K))
+print(bfs())
