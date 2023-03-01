@@ -1,4 +1,4 @@
-# [번외]  - 15547
+# [번외] Lorem ipsum - 15547
 
 [문제 링크](https://www.acmicpc.net/problem/15547) 
 
