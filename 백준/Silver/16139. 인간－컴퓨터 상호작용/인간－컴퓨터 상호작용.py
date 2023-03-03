@@ -1,5 +1,5 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+input = lambda: sys.stdin.readline().rstrip()
 
 S = input()
 
