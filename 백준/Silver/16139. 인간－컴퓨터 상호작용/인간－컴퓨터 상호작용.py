@@ -1,15 +1,18 @@
-input = lambda: __import__('sys').stdin.readline().rstrip()
-
-str = input()
-
-A = [[0] * 26 for _ in range(len(str)+1)]
-
-for i in range(len(str)):
-    A[i][ord(str[i])-97] = 1
+#TESTING
+import sys
+input = sys.stdin.readline
+s = input()
+n = int(input())
+re = [[0]*26 for i in range(len(s))]
+for i in range(len(s)):
     for j in range(26):
-        A[i][j] += A[i-1][j]
-
-for _ in range(int(input())):
-    ch, l, r = input().split()
-    a, l, r = ord(ch)-97, int(l), int(r)
-    print(A[r][a] - A[l-1][a])
+        if ord(s[i])-97==j:
+            re[i][j] = re[i-1][j]+1
+        else:
+            re[i][j] = re[i-1][j]
+for _ in range(n):
+    t,x,y = input().split()
+    if int(x)==0:
+        print(re[int(y)][ord(t)-97])
+    else:
+        print(re[int(y)][ord(t)-97]-re[int(x)-1][ord(t)-97])
