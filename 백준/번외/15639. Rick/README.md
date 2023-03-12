@@ -8,7 +8,7 @@
 
 ### 분류
 
-문자열(string), 구현(implementation)
+번외, 문자열(string), 구현(implementation)
 
 ### 문제 설명
 
