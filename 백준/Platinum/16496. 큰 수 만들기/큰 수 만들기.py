@@ -1,7 +1,7 @@
 import sys
 input = lambda: sys.stdin.readline().rstrip()
 
-n = int(input())
+input()
 a = list(map(int,input().split()))
 
 numbers = [str(i) for i in a]
