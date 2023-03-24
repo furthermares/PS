@@ -81,7 +81,7 @@ for P, v in [Pxy, abs(x + y)], [PX, X], [PY, Y]:
 # Discard factors that divides X or Y, for they're coprimes.
 P = list(set(Pxy).difference(PX, PY))
 
-# Unnecessary as they're already the initial values.
+# Unnecessary as they're already the inital values.
 if P == [0]:
     print(1,1)
     exit(0)
