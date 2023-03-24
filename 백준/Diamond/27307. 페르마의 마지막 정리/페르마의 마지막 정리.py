@@ -14,15 +14,6 @@ def modular_pow(base, exponent, modulus):
 		base = (base * base) % modulus
 	return result
 
-def modular_pow_womod(base, exponent):
-	result = 1
-	while (exponent > 0):
-		if (exponent & 1):
-			result = (result * base) % (MOD ** 5)
-		exponent = exponent >> 1
-		base = (base * base) % (MOD ** 5)
-	return result
-
 def miller_rabin(n, a):
 	d = n - 1
 	while d % 2 == 0:
@@ -75,7 +66,7 @@ n, x, y, m = map(int,input().split())
 X, Y = abs(x), abs(y)
 
 ###
-# Prime factorize |x+y|, |x|, |y| with Pollard Rho
+# Prime factorize |x+y|, |x|, |y| with Pollard Rho.
 Pxy = []
 PX = []
 PY = []
@@ -86,14 +77,11 @@ for P, v in [Pxy, abs(x + y)], [PX, X], [PY, Y]:
     	k = PollardRho(v)
     	P.append(k)
     	v //= k
-#print("P(|x+y|) =", *Pxy) #
-#print("P(|X|) =", *PX) #
-#print("P(|Y|) =", *PY) #
 
-# Discard factors that divides X or Y
+# Discard factors that divides X or Y, for they're coprimes.
 P = list(set(Pxy).difference(PX, PY))
-#print("P:", *P) #
 
+# Unnecessary as they're already the inital values.
 if P == [0]:
     print(1,1)
     exit(0)
@@ -115,14 +103,12 @@ for pi in P:
         t //= pi
         
     f.append(vpiXY + vpin)
-#print("f:", *f) #
 
 ###
-# Calculating len(dm), sum(dm)
+# Calculate len(dm), sum(dm).
 g = []
 for fi in f:
     g.append(fi//m)
-#print("g:", *g) #
 
 len_dm = 1
 for gi in g:
@@ -131,7 +117,8 @@ for gi in g:
 
 sum_dm = 1
 for gi, pi in zip(g, P):
-    sum_dm *= (modular_pow_womod(pi, (gi+1)*m) - 1) // (modular_pow_womod(pi, m) - 1)
+    # number can get too big for MOD to handle. 
+    sum_dm *= (modular_pow(pi, (gi+1)*m, MOD**5) - 1) // (modular_pow(pi, m, MOD**5) - 1)
     sum_dm %= MOD
 
 print(len_dm, sum_dm)
