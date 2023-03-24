@@ -122,3 +122,4 @@ for gi, pi in zip(g, P):
     sum_dm %= MOD
 
 print(len_dm, sum_dm)
+#
