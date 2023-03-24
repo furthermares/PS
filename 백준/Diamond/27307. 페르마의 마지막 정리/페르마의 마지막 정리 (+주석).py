@@ -115,7 +115,7 @@ for gi in g:
 # 합 계산 (수식대로)
 sum_dm = 1
 for gi, pi in zip(g, P):
-    sum_dm *= (modular_pow(pi, (gi+1)*m, MOD) - 1) // (modular_pow(pi, m, MOD) - 1)
+    sum_dm *= (modular_pow(pi, (gi+1)*m, MOD**5) - 1) // (modular_pow(pi, m, MOD**5) - 1)
     sum_dm %= MOD
 
 print(len_dm, sum_dm)
