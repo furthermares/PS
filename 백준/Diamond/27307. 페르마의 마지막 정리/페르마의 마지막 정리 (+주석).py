@@ -5,8 +5,7 @@ from random import randrange
 
 MOD = 1000000007
 
-# 큰 수 소인수분해 AC 맞은 코드입니다. Witness수 범위 조정 했습니다.
-# 69번 줄에서 시작.
+# 큰 수 소인수분해 코드 생략.
 
 def modular_pow(base, exponent, modulus):
 	result = 1
