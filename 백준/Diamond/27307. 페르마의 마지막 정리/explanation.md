@@ -7,7 +7,7 @@
 
 ## 문제 요약
 
-z는 |x|,|y|와 서로소이지만 |x+y|와는 아님.그 z중에서 |x<sup>n</sup>+y<sup>n</sup>|이 z<sup>m</sup>의 배수일 때는? (n은 홀수)
+z는 |x|,|y|와 서로소이지만 |x+y|와는 아님. 그 z중에서 |x<sup>n</sup>+y<sup>n</sup>|이 z<sup>m</sup>의 배수일 때는? (n은 홀수)
 
 
 ## 풀이
@@ -19,15 +19,15 @@ LTE lemma에 따르면 식 하나로 표현된다. 그렇게 해서 소인수분
 
 식을 z<sup>m</sup>을 사용하는 꼴로 나타내자.
 
-1. |x+y| 소인수분해: P(|x+y|)
+1. |x+y| 소인수분해: ℙ(|x+y|)
 
   z는 x,y와는 서로소이다. 소인수분해해서 빼주자.
 
-2. X 소인수분해: P(X). (X = |x|)
+2. X 소인수분해: ℙ(X). (X = |x|)
 
-3. Y 소인수분해: P(Y). (Y = |y|)
+3. Y 소인수분해: ℙ(Y). (Y = |y|)
 
-4. (1)에서 (2)와 (3) 뺴기. P = P(|x+y|) - P(X) - P(Y)
+4. (1)에서 (2)와 (3) 뺴기. ℙ = ℙ(|x+y|) - ℙ(X) - ℙ(Y)
 
 5. 중복 요소 제거 → 모두 e<sup>t</sup>로 처리됨.
 
@@ -47,21 +47,21 @@ m 제곱하면 z<sup>m</sup> = p<sub>1</sub><sup>e<sub>1</sub>m</sup> p<sub>2</s
 
 이제 식을 LTE로 제대로 소인수분해 해보자.
 
-*v*<sub>p</sub>(n) = (n에 p가 몇제곱 있나). *v*<sub>2</sub>(12) = *v*<sub>2</sub>(2<sup>2</sup>3<sup>1</sup>) = 2, *v*<sub>3</sub>(12) = *v*<sub>3</sub>(2<sup>2</sup>3<sup>1</sup>) = 1
+𝜈<sub>p</sub>(n) = (n에 p가 몇제곱 있나). 𝜈<sub>2</sub>(12) = 𝜈<sub>2</sub>(2<sup>2</sup>3<sup>1</sup>) = 2, 𝜈<sub>3</sub>(12) = 𝜈<sub>3</sub>(2<sup>2</sup>3<sup>1</sup>) = 1
 
-LTE: 이 문제에서와 같이 n이 홀수이고 p|(x+y) 이면, *v*<sub>p</sub>(x<sup>n</sup>+y<sup>n</sup>) = *v*<sub>p</sub>(x + y) + *v*<sub>p</sub>(n) 이 성립합니다.
+LTE: 이 문제에서와 같이 n이 홀수이고 p|(x+y) 이면, 𝜈<sub>p</sub>(x<sup>n</sup>+y<sup>n</sup>) = 𝜈<sub>p</sub>(x + y) + 𝜈<sub>p</sub>(n) 이 성립합니다.
 
 1. 케이스 1: xy ≥ 1 (부호가 같을 때)
 
-   f<sub>i</sub> = *v*<sub>p<sub>i</sub></sub>(|X<sup>n</sup>+Y<sup>n</sup>|) = *v*<sub>p<sub>i</sub></sub>(X<sup>n</sup>+Y<sup>n</sup>) = *v*<sub>p<sub>i</sub></sub>(X + Y) + *v*<sub>p<sub>i</sub></sub>(n)
+   f<sub>i</sub> = 𝜈<sub>p<sub>i</sub></sub>(|X<sup>n</sup>+Y<sup>n</sup>|) = 𝜈<sub>p<sub>i</sub></sub>(X<sup>n</sup>+Y<sup>n</sup>) = 𝜈<sub>p<sub>i</sub></sub>(X + Y) + 𝜈<sub>p<sub>i</sub></sub>(n)
 
 2. 케이스 2: xy ≤ 1 (부호가 다를 때)
 
-   f<sub>i</sub> = *v*<sub>p<sub>i</sub></sub>(|X<sup>n</sup>+Y<sup>n</sup>|) = *v*<sub>p<sub>i</sub></sub>(X<sup>n</sup>-Y<sup>n</sup>) = *v*<sub>p<sub>i</sub></sub>(X - Y) + *v*<sub>p<sub>i</sub></sub>(n)
+   f<sub>i</sub> = 𝜈<sub>p<sub>i</sub></sub>(|X<sup>n</sup>+Y<sup>n</sup>|) = 𝜈<sub>p<sub>i</sub></sub>(X<sup>n</sup>-Y<sup>n</sup>) = 𝜈<sub>p<sub>i</sub></sub>(X - Y) + 𝜈<sub>p<sub>i</sub></sub>(n)
 
 3. "사실 생각해보면 굳이 경우를 나눌 필요가 없긴 하다." (p = 2 일때도 그렇다고 함)
 
-   두 경우 다: *v*<sub>p<sub>i</sub></sub>(x + y) + *v*<sub>p<sub>i</sub></sub>(n) 이다. 이렇게 처리. (x = x, X = |x|)
+   두 경우 다: 𝜈<sub>p<sub>i</sub></sub>(x + y) + 𝜈<sub>p<sub>i</sub></sub>(n) 이다. 이렇게 처리. (x = x, X = |x|)
 
 지금 구한게 |X<sup>n</sup>+Y<sup>n</sup>|에 소인수 p가 몇 제곱이나 있는가를 LTE로 구한 것.
 
@@ -87,8 +87,8 @@ m=2이면 두개를 한꺼번에 넣는 것. 2 한번 밖에 안들어간다.
 
 ## 비고
 
-- *v*(1)=0 처리
-  - |x+y| = 1, 즉 P = {0} 이면 그 안에 들어갈 수 있는 z<sup>m</sup>는 1 밖에 없다. → print(1,1); exit(0);
+- 𝜈(1)=0 처리
+  - |x+y| = 1, 즉 ℙ = {0} 이면 그 안에 들어갈 수 있는 z<sup>m</sup>는 1 밖에 없다. → print(1,1); exit(0);
   - 그렇지만 따로 처리 없어도 빈 리스트로 놔두면 iterate 되지 않고 초기값인 1,1로 출력되어 상관 없다.
 - mod 처리된 식을 빼고 나눌때 핸들링
   - mod 처리된 값을 추가로 연산할 때 빼거나 나눌 때 주의해야 하는게 음수가 되거나 0이 될 수 있다는 점이다.
