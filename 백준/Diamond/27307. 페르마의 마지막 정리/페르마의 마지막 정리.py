@@ -65,8 +65,6 @@ def PollardRho(n):
 n, x, y, m = map(int,input().split())
 X, Y = abs(x), abs(y)
 
-###
-# Prime factorize |x+y|, |x|, |y| with Pollard Rho.
 Pxy = []
 PX = []
 PY = []
@@ -78,16 +76,8 @@ for P, v in [Pxy, abs(x + y)], [PX, X], [PY, Y]:
     	P.append(k)
     	v //= k
 
-# Discard factors that divides X or Y, for they're coprimes.
 P = list(set(Pxy).difference(PX, PY))
 
-# Unnecessary as they're already the inital values.
-if P == [0]:
-    print(1,1)
-    exit(0)
-
-###
-# LTE lemma
 f = []
 for pi in P:
     vpiXY = 0
@@ -104,8 +94,6 @@ for pi in P:
         
     f.append(vpiXY + vpin)
 
-###
-# Calculate len(dm), sum(dm).
 g = []
 for fi in f:
     g.append(fi//m)
@@ -117,7 +105,6 @@ for gi in g:
 
 sum_dm = 1
 for gi, pi in zip(g, P):
-    # number can get too big for MOD to handle. 
     sum_dm *= (modular_pow(pi, (gi+1)*m, MOD**5) - 1) // (modular_pow(pi, m, MOD**5) - 1)
     sum_dm %= MOD
 
