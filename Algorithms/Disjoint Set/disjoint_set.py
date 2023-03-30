@@ -19,11 +19,9 @@ def union_parent(parent, a, b):
 
 # input a number of nodes and edges(number of union operations)
 v, e = map(int,input().split())
-parent = [0] * (v+1)
 
 # initalize parents as itself in parent table.
-for i in range(1, v+1):
-    parent[i] = i
+parent = [i for i in range(v+1)]
 
 cycle = False    # check for a cycle
 
