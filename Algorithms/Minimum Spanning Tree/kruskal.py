@@ -61,5 +61,5 @@ print(result)
 159
 """
 """complexity
-Time: O(ElogE)
+time: O(ElogE)
 """
