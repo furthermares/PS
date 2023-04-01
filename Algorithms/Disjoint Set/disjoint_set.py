@@ -57,7 +57,7 @@ set each element is in: 1 1 1 1 5 5
 parent table: 1 1 1 1 5 5
 """
 """complexity
-time: O(V + M(1 + log_(2-M/V)(V)) ≈ O(V + Mlog_2(V))
+time: O(V + M(1 + log_(2-M/V) V) ≈ O(V + M * log_2 V)
 """
 
 # Checking for cycles
