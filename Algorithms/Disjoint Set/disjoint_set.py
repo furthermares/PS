@@ -25,7 +25,7 @@ parent = [i for i in range(v+1)]
 
 cycle = False    # check for a cycle
 
-for i in range(e):
+for _ in range(e):
     a, b = map(int,input().split())
     # if it cycles, break
     if find_parent(parent, a) == find_parent(parent, b):
