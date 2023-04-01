@@ -52,6 +52,13 @@ for i in range(1, v+1):
 2 4
 5 6
 """
+"""output
+set each element is in: 1 1 1 1 5 5 
+parent table: 1 1 1 1 5 5
+"""
+"""complexity
+time: O(V + M(1 + log_(2-M/V)(V)) ≈ O(V + Mlog_2(V))
+"""
 
 # Checking for cycles
 if cycle:
