@@ -1,5 +1,3 @@
-import sys
-input = lambda: sys.stdin.readline().rstrip()
 from collections import deque
 
 # input numbers of nodes and edges
