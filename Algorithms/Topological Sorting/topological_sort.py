@@ -37,8 +37,7 @@ def topological_sort():
                 q.append(i)
 
     # print result after the sort
-    for i in result:
-        print(i, end=' ')
+    print(*result)
 
 topological_sort()
 
