@@ -36,7 +36,6 @@ def topological_sort():
             if indegree[i] == 0:
                 q.append(i)
 
-
     # print result after the sort
     for i in result:
         print(i, end=' ')
