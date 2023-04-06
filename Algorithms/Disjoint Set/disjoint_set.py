@@ -17,7 +17,7 @@ def union_parent(parent, a, b):
     else:
         parent[a] = b
 
-# input a number of nodes and edges(number of union operations)
+# input numbers of nodes and edges(number of union operations)
 v, e = map(int,input().split())
 
 # initalize parents as itself in parent table.
