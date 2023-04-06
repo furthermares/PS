@@ -9,7 +9,7 @@ indegree = [0] * (v+1)
 # initalize each linked list(graph) for connected edges to each nodes
 graph = [[] for i in range(v+1)]
 
-# Input all edges for directed graph
+# input all edges for Directed Acyclic Graph (DAG)
 for _ in range(e):
     a, b = map(int, input().split())
     graph[a].append(b)
@@ -17,11 +17,11 @@ for _ in range(e):
     indegree[b] += 1
 
 # Topology sort function
-def topology_sort():
+def topological_sort():
     result = []
     q = deque()
 
-    # At first, append node with 0 indegrees to queue
+    # first, append node with 0 indegrees to queue
     for i in range(1, v+1):
         if indegree[i] == 0:
             q.append(i)
@@ -43,7 +43,7 @@ def topology_sort():
     for i in result:
         print(i, end=' ')
 
-topology_sort()
+topological_sort()
 
 """input
 7 8
