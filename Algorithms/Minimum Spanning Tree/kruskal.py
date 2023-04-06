@@ -1,6 +1,3 @@
-import sys
-input = lambda: sys.stdin.readline().rstrip()
-
 # Find a set element "x" is in
 def find_parent(parent, x):
     # If it's not a root node, call it recursively.
