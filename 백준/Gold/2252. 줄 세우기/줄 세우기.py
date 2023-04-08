@@ -1,5 +1,5 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
 from collections import deque
 
 v, e = map(int,input().split())
