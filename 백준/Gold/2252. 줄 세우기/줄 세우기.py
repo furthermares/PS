@@ -9,7 +9,6 @@ graph = [[] for i in range(v+1)]
 for _ in range(e):
     a, b = map(int, input().split())
     graph[a].append(b)
-    # increment indegree by 1
     indegree[b] += 1
 
 def topological_sort():
