@@ -1,8 +1,9 @@
-""" Input data range
+"""
+# Input data range
 2 ≤ No. of Nodes ≤ 50,000
 1 ≤ No. of Node pairs ≤ 10,000
-"""
-""" Input, Output, Size, etc.
+
+# Input, Output, Size, etc.
 https://boj.kr/11437
 """
 
@@ -12,7 +13,7 @@ sys.setrecursionlimit(10**5)
 n = int(input())
 
 parent = [0] * (n+1) # parent node
-d = [0] * (n+1) # node depth
+depth = [0] * (n+1) # node depth
 visited = [False] * (n+1) # check if node is visited
 graph = [[] for _ in range(n+1)] # graph info
 
@@ -24,7 +25,7 @@ for _ in range(n-1):
 # Get depth
 def get_depth(x, depth):
     visited[x] = True
-    d[x] = depth
+    depth[x] = depth
     for y in graph[x]:
         if visited[y]:
             continue
@@ -34,8 +35,8 @@ def get_depth(x, depth):
 # Find LCA
 def lca(a, b):
     # First make their depth equal
-    while d[a] != d[b]:
-        if d[a] > d[b]:
+    while d[a] != depth[b]:
+        if depth[a] > depth[b]:
             a = parent[a]
         else:
             b = parent[b]
