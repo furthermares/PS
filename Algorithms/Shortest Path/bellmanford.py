@@ -1,10 +1,12 @@
 """ parameters
 https://www.acmicpc.net/problem/11657
 """
+""" Complexity
+Time: O(VE)
+Space: O(N)
+"""
 
 import sys
-def input(): return sys.stdin.readline().rstrip()
-
 INF = sys.maxsize
 
 # input numbers of nodes and edges
