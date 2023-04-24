@@ -28,10 +28,7 @@ def bellman_ford(start):
     # loop for n - 1 rounds
     for i in range(n):
         # check all edges each loop
-        for j in range(m):
-            cur_node = edges[j][0]
-            next_node = edges[j][1]
-            edge_cost = edges[j][2]
+        for cur_node, next_node, edge_cost in edges:
             # if it's shorter to go past current node to next node
             if dist[cur_node] != INF and dist[next_node] > dist[cur_node] + edge_cost:
                 dist[next_node] = dist[cur_node] + edge_cost
