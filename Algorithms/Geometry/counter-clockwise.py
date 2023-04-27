@@ -3,7 +3,7 @@ class Point:
         self.x = x
         self.y = y
 
-def orientation(p1, p2, p3):
+def ccw(p1, p2, p3):
     val = (p1.x*p2.y + p2.x*p3.y + p3.x*p1.y) - (p2.x*p1.y + p3.x*p2.y + p1.x*p3.y)
     
     if val > 0:
@@ -20,7 +20,7 @@ P = []
 for _ in range(3):
     P.append(Point(*map(int,input().split())))
 
-o = orientation(P[0], P[1], P[2])
+o = ccw(P[0], P[1], P[2])
 
 if o == 1:
     print("Clockwise")
