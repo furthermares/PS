@@ -14,7 +14,7 @@ def fft(x, inv=False):
     
 def conv(A,B):
     n = 1
-    while n <= max(len(X),len(Y)):
+    while n <= max(len(A),len(B)):
         n <<= 1
     A += [0]*(n - len(A))
     B += [0]*(n - len(B))
