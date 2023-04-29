@@ -1,3 +1,5 @@
+# boj.kr/1929
+
 from math import sqrt
 
 N = int(input())
