@@ -2,7 +2,6 @@ import sys
 def input(): return sys.stdin.readline().rstrip()
 import cmath
 
-# Testing. PyRival code.
 def fft(a, inv=False):
     n = len(a)
     w = [cmath.rect(1, (-2 if inv else 2) * cmath.pi * i / n) for i in range(n >> 1)]
@@ -49,11 +48,10 @@ for _ in range(int(input())):
     f[int(input())] = 1
 f[0] = 1
 
-g=f[:]
-res = fft_conv(f,g)
+res = fft_conv(f,f[:])
 
 cnt = 0
 for _ in range(int(input())):
-    if res[int(input())]>0:
+    if res[int(input())]:
         cnt += 1
 print(cnt)
