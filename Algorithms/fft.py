@@ -26,10 +26,11 @@ def conv(A,B):
 X = list(map(int,input().split()))
 Y = list(map(int,input().split()))
 
-print(conv(X,Y))
+print(conv(X,Y)[:len(X)+len(Y)-1])
 
 """
 (Polynomial multiplication using FFT)
+(!
 Input:
 9 -10 7 6
 -5 4 0 -2
