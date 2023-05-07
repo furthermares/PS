@@ -9,20 +9,24 @@
 ## Algorithm library (WIP)
 
 - Algebra
-  - Modular Exponentiation
-  - Fast Fourier Transform
-  - Number Theoretic Transform
-- Number Theory
-  - Primality Test
+  - Miscellaneous
+    - Modular Exponentiation
+    - Fast Fourier Transform
+    - Number Theoretic Transform
+  - Prime numbers
     - Sieve of Eratosthenes
     - Pollard Rho
 - Data Structures
-  - Disjoint Set
+  - Trees
+    - Disjoint Set Union
 - Graphs
-  - Bellman Ford
-  - Topological Sorting
-- Tree
-  - Kruskal
+  - Single-source shortest paths
+    - Bellman-Ford
+  - Spanning trees
+    - Kruskal
   - Lowest Common Ancestor
+    - Lowest Common Ancestor
+  - Miscellaneous
+    - Topological Sorting
 - Gemoetry
   - Counterclockwise
