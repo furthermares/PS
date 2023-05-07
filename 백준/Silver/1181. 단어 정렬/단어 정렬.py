@@ -1,3 +1,6 @@
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
 S = set()
 for _ in range(int(input())):
     S.add(input())
