@@ -1,10 +1,8 @@
+# https://boj.kr/11438
 """
 # Input data range
 2 ≤ No. of Nodes ≤ 100,000
 1 ≤ No. of Node pairs ≤ 100,000
-
-# Info
-https://boj.kr/11438
 
 # Input
 15
