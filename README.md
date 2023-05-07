@@ -9,13 +9,14 @@
 ## Algorithm library (WIP)
 
 - Algebra
-  - Miscellaneous
+  - Fundamentals
     - Modular Exponentiation
-    - Fast Fourier Transform
-    - Number Theoretic Transform
   - Prime numbers
     - Sieve of Eratosthenes
     - Pollard Rho
+  - Miscellaneous
+    - Fast Fourier Transform
+    - Number Theoretic Transform
 - Data Structures
   - Trees
     - Disjoint Set Union
