@@ -1,10 +1,4 @@
-""" parameters
-https://www.acmicpc.net/problem/11657
-"""
-""" Complexity
-Time: O(VE)
-Space: O(N)
-"""
+#https://www.acmicpc.net/problem/11657
 
 import sys
 INF = sys.maxsize
