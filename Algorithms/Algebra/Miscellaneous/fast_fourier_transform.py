@@ -15,12 +15,10 @@ def fft(x, w):
         mul *= w
     
 def conv(a,b):
-    n = 1
-    while n <= max(len(a),len(b)):
-        n <<= 1
-    n <<= 1
-    a.extend([0]*(n - len(a)))
-    b.extend([0]*(n - len(b)))
+    s = len(a) + len(b) - 1
+    n = 1 << s.bit_length()
+    a.extend([0.0] * (n - len(a)))
+    b.extend([0.0] * (n - len(b)))
     
     w = complex(math.cos(2*math.pi/n), math.sin(2*math.pi/n))
     fft(a, w)
