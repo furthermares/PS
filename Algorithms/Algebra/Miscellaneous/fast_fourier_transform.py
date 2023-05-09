@@ -1,40 +1,48 @@
-from cmath import exp, pi
+import math
 
-def fft(x, inv=False):
+def fft(x, w):
     n = len(x)
     if n == 1: return x
-    even = fft(x[0::2], inv)
-    odd =  fft(x[1::2], inv)
-    if not inv:
-        T= [exp(-2j*pi*k/n)*odd[k] for k in range(n//2)]
-    else:
-        T= [exp( 2j*pi*k/n)*odd[k] for k in range(n//2)]
-    return [even[k] + T[k] for k in range(n//2)] + \
-           [even[k] - T[k] for k in range(n//2)]
+    even = x[::2]
+    odd = x[1::2]
+    fft(even, w*w)
+    fft(odd, w*w)
+    mul = complex(1,0)
+    n = len(x) >> 1
+    for i in range(n):
+        x[i] = even[i] + mul*odd[i]
+        x[i+n] = even[i] - mul*odd[i]
+        mul *= w
     
-def conv(A,B):
+def conv(a,b):
     n = 1
-    while n <= max(len(A),len(B)):
+    while n <= max(len(a),len(b)):
         n <<= 1
-    A += [0]*(n - len(A))
-    B += [0]*(n - len(B))
-    AT = fft(A)
-    BT = fft(B)
-    C = [AT[i]*BT[i] for i in range(n)]
-    return [round((a/n).real) for a in fft(C, True)]
+    n <<= 1
+    a.extend([0]*(n - len(a)))
+    b.extend([0]*(n - len(b)))
+    
+    w = complex(math.cos(2*math.pi/n), math.sin(2*math.pi/n))
+    fft(a, w)
+    fft(b, w)
+    c = [a[i]*b[i] for i in range(n)]
+    fft(c, 1/w)
+    
+    c = [round(c[i].real/n) for i in range(n)]
+    return c
 
+N, M = (map(int,input().split()))
 X = list(map(int,input().split()))
 Y = list(map(int,input().split()))
 
-print(conv(X,Y)[:len(X)+len(Y)-1])
+res = conv(X,Y)[:N+M-1]
+print(*res)
 
 """
-(Polynomial multiplication using FFT)
-(!
 Input:
 9 -10 7 6
 -5 4 0 -2
 Output:
--45 86 -75 -20 44 -14 -12 0
+-45 86 -75 -20 44 -14 -12
 Time Complexity: O(nlogn)
 """
