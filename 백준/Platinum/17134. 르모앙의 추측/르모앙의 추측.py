@@ -35,18 +35,14 @@ def conv(A,B):
         
 p1 = [0] * 2 + [1] * (MAX_N-2)
 p2 = [0] * MAX_N
-p = []
-for n in range(MAX_N):
+for n in range(int(math.sqrt(MAX_N))):
     if p1[n]:
-        p.append(n)
         for i in range(n*n, MAX_N, n):
             p1[i] = 0
-p1[2] = 0
-
 p2 = [0] * MAX_N
-for n in p:
-    if n > MAX_N>>1:
-        break
-    p2[n<<1] = 1
+for n in range(MAX_N>>1):
+    if p1[n]:
+        p2[n<<1] = 1
+p1[2] = 0
 
 conv(p1, p2)
