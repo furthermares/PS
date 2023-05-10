@@ -1,8 +1,8 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
-import math
+from math import sqrt, pi, sin, cos
 
-MAX_N = 1000002
+MAX_N = 1000001
 
 def fft(x, w):
     n = len(x)
@@ -21,9 +21,9 @@ def fft(x, w):
 def conv(A,B):
     s = len(A) + len(B) - 1
     n = 1 << s.bit_length()
-    A.extend([0.0] * (n - len(A)))
-    B.extend([0.0] * (n - len(B)))
-    w = complex(math.cos(2*math.pi/n), math.sin(2*math.pi/n))
+    A.extend([0] * (n - len(A)))
+    B.extend([0] * (n - len(B)))
+    w = complex(cos(2*pi/n), sin(2*pi/n))
     fft(A, w)
     fft(B, w)
     C = [A[i]*B[i] for i in range(n)]
@@ -33,7 +33,7 @@ def conv(A,B):
         
 p1 = [0] * 2 + [1] * (MAX_N-2)
 p2 = [0] * MAX_N
-for n in range(int(math.sqrt(MAX_N))):
+for n in range(int(sqrt(MAX_N))):
     if p1[n]:
         for i in range(n*n, MAX_N, n):
             p1[i] = 0
