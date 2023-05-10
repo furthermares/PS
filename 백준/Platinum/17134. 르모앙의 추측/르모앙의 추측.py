@@ -29,7 +29,7 @@ def conv(A,B):
     C = [A[i]*B[i] for i in range(n)]
     fft(C, 1/w)
     for _ in range(int(input())):
-        print(round(C[int(input())].real/n))
+        sys.stdout.write(str(round(C[int(input())].real/n))+"\n")
         
 p1 = [0] * 2 + [1] * (MAX_N-2)
 p2 = [0] * MAX_N
