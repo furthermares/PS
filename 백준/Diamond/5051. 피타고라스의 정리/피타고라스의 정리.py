@@ -1,5 +1,6 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
+
 MOD = 998244353
 OMEGA = 3
 
@@ -49,28 +50,26 @@ def ntt(a, inv=False):
             a[i] = a[i] * t % MOD
 
 
-def conv(a, b):
-    s = len(a) + len(b) - 1
+def conv(a):
+    s = len(a)*2 - 1
     n = 1 << s.bit_length()
     a.extend([0] * (n - len(a)))
-    b.extend([0] * (n - len(b)))
-
-    ntt(a), ntt(b)
+    ntt(a)
     for i in range(n):
-        a[i] = a[i] * b[i] % MOD
+        a[i] = a[i] * a[i] % MOD
     ntt(a, True)
     return a
 
 N = int(input())
 
-p = [0] * (N)
-same = [0] * (N)
+p = [0] * N
+same = [0] * N
 
 for i in range(1,N):
     p[i*i%N] += 1
     same[2*i*i%N] += 1
 
-convd = conv(p[:],p[:])
+convd = conv(p[:])
 
 r1 = 0
 r2 = 0
