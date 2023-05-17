@@ -6,7 +6,7 @@
 ## Documented
 [[Diamond II] 27307. 페르마의 마지막 정리](백준/Diamond/27307. 페르마의 마지막 정리/explanation.md)
 
-## Algorithm library (WIP)
+## Algorithm library (Ongoing)
 
 - Algebra
   - Fundamentals
@@ -30,4 +30,6 @@
   - Miscellaneous
     - Topological Sorting
 - Gemoetry
-  - Counterclockwise
+  - Fundamentals
+    - CCW
+    - Intersecting lines
