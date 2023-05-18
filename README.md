@@ -32,4 +32,4 @@
 - Gemoetry
   - Fundamentals
     - CCW
-    - Line intersectinon
+    - Line segment intersection check
