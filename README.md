@@ -32,4 +32,4 @@
 - Gemoetry
   - Fundamentals
     - CCW
-    - Intersecting lines
+    - Line intersectinon
