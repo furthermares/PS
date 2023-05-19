@@ -42,7 +42,8 @@ for edge in edges:
 
 print(result)
 
-"""input
+"""
+# Input
 7 9
 1 2 29
 1 5 75
@@ -53,10 +54,7 @@ print(result)
 4 7 13
 5 6 53
 6 7 25
-"""
-"""output
+# Output
 159
-"""
-"""complexity
-time: O(ElogE)
+# Time Complexity: O(ElogE)
 """
