@@ -1,4 +1,4 @@
-#https://www.acmicpc.net/problem/11657
+# https://icpc.me//11657
 
 import sys
 INF = sys.maxsize
