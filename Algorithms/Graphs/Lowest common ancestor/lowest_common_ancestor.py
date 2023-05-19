@@ -1,4 +1,4 @@
-# https://boj.kr/11438
+# https://icpc.me//11438
 """
 # Input data range
 2 ≤ No. of Nodes ≤ 100,000
