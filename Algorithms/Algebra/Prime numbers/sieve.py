@@ -1,4 +1,4 @@
-# boj.kr/1929
+# https://icpc.me/1929
 
 from math import sqrt
 
