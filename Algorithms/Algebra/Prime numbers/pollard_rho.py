@@ -69,9 +69,9 @@ factors.sort()
 print(*factors, sep="\n")
 
 """
-Input:
+# Input:
 18991325453139
-Output:
+# Output:
 3
 3
 13
@@ -79,5 +79,5 @@ Output:
 271
 1381
 2423
-Time Complexity: O(sqrt(N))
+# Time Complexity: O(sqrt(N))
 """
