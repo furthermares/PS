@@ -42,18 +42,19 @@ print('parent table: ', end='')
 for i in range(1, v+1):
     print(parent[i], end=' ')
 
-"""input
+"""
+Input
 6 4
 1 4
 2 3
 2 4
 5 6
-"""
-"""output
+
+Output
 set each element is in: 1 1 1 1 5 5 
 parent table: 1 1 1 1 5 5
-"""
-"""complexity
+
+Complexity
 time: O(V + M(1 + log_(2-M/V) V) ≈ O(V + M * log_2 V)
 """
 
@@ -63,7 +64,8 @@ if cycle:
 else:
     print("Cycle not formed.")
 
-"""input
+"""
+Input
 3 3
 1 2
 1 3
