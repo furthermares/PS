@@ -1,14 +1,14 @@
 # Find a set element "x" is in
-def find_parent(parent, x):
+def find_parent(x):
     # If it's not a root node, call it recursively.
     if parent[x] != x:
-        parent[x] = find_parent(parent, parent[x])
+        parent[x] = find_parent(parent[x])
     return parent[x]
 
 # union
-def union_parent(parent, a, b):
-    a = find_parent(parent, a)
-    b = find_parent(parent, b)
+def union_parent(a, b):
+    a = find_parent(a)
+    b = find_parent(b)
     if a < b:
         parent[b] = a
     else:
@@ -25,16 +25,16 @@ cycle = False    # check for a cycle
 for _ in range(e):
     a, b = map(int,input().split())
     # if it cycles, break
-    if find_parent(parent, a) == find_parent(parent, b):
+    if find_parent(a) == find_parent(b):
         cycle = True
         break
     else:
-        union_parent(parent, a, b)
+        union_parent(a, b)
 
 # Checking for connections
 print('set each element is in: ', end='')
 for i in range(1, v+1):
-    print(find_parent(parent, i), end=' ')
+    print(find_parent(i), end=' ')
 
 print()
 
