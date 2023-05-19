@@ -41,7 +41,8 @@ def topological_sort():
 
 topological_sort()
 
-"""input
+"""
+# Input
 7 8
 1 2
 1 5
@@ -51,10 +52,7 @@ topological_sort()
 4 7
 5 6
 6 4
-"""
-"""output
+# Output
 1 2 5 3 6 4 7
-"""
-"""complexity
-time: O(V + E)
+# Time Complexity: O(V + E)
 """
