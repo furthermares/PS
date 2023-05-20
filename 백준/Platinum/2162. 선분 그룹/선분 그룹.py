@@ -7,17 +7,10 @@ class Point:
         self.x = x
         self.y = y
 
-    def __repr__(self):
-       return "({},{})".format(self.x, self.y)
-
 class Line:
     def __init__(self, xs, ys, xe, ye):
         self.s = Point(xs, ys)
         self.e = Point(xe, ye)
-    
-    def __repr__(self):
-        return "(({},{}),({},{}))".format(self.s.x, self.s.y, self.e.x, self.e.y)
-
 
 def on_segment(p, q, r):
     if q.x <= max(p.x, r.x) and q.x >= min(p.x, r.x) and q.y <= max(p.y, r.y) and q.y >= min(p.y, r.y):
@@ -62,7 +55,6 @@ def union_parent(a, b):
         parents[b] = a
     else:
         parents[a] = b
-
 
 N = int(input())
 
