@@ -1,12 +1,11 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
-from math import sqrt
 
 def circles_intersect(p1, p2):
     x1,y1,r1 = p1
     x2,y2,r2 = p2
-    d = sqrt((x1-x2)**2 + (y1-y2)**2)
-    if d <= r1+r2:
+    d = (x1-x2)**2 + (y1-y2)**2
+    if d <= (r1+r2)**2:
         return True
     return False
 
