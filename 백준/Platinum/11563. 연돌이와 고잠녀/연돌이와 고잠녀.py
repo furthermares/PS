@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-inm = lambda: map(int,input().split())
 from math import sqrt
 
 def distance(x1, y1, x2, y2):
@@ -20,7 +19,7 @@ def perpendicular_dist(x1, y1, x2, y2, px, py):
         return abs(cross(x2-x1, y2-y1, px-x1, py-y1)) / distance(x1, y1, x2, y2)
     return -1
     
-N, M = inm()
+N, M = map(int,input().split())
 
 lineN = []
 lineM = []
