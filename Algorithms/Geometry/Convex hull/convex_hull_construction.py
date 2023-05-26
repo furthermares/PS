@@ -1,6 +1,6 @@
 # Monotone chain
 """
-# https://icpm.me/1708
+# https://icpc.me/1708
 # Time Complexity: O(n log n)
 """
 
