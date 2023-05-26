@@ -2,9 +2,18 @@ class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
+        
+    def __lt__(self, other):
+        return self.x < other.x if self.x != other.x else self.y < other.y
 
-def ccw(p1, p2, p3):
-    val = (p1.x*p2.y + p2.x*p3.y + p3.x*p1.y) - (p2.x*p1.y + p3.x*p2.y + p1.x*p3.y)
+    def __sub__(self, other):
+        return Point(self.x - other.x, self.y - other.y)
+    
+    def cross(self, other):
+        return self.x * other.y - self.y * other.x
+
+def ccw(o, a, b):
+    val = (a - o).cross(b - o)
     
     if val > 0:
       # Clockwise orientation
