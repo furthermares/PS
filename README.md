@@ -33,3 +33,5 @@
   - Fundamentals
     - CCW
     - Line segment intersection check
+  - Convex hull
+    - Convex hull construction (Monotone Chain)
