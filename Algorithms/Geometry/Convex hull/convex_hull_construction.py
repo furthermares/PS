@@ -22,6 +22,9 @@ class Point:
     
     def cross(self, other):
         return self.x * other.y - self.y * other.x
+
+    def __repr__(self):
+       return "({},{})".format(self.x, self.y)
         
 def ccw(o, a, b):
     val = (a - o).cross(b - o)
