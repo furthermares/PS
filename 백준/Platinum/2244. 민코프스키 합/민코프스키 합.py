@@ -1,4 +1,3 @@
-#https://www.acmicpc.net/submit/2244 (WA)
 import sys
 input = sys.stdin.readline
 inm = lambda: map(int,input().split())
