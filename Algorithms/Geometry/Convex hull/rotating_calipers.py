@@ -4,7 +4,7 @@ Time Complexity: O(NlogN)
 Auxiliary Space: O(N)
 """
 
-import math
+from math import sqrt
 
 class Point:
     def __init__(self, x, y):
@@ -21,7 +21,7 @@ class Point:
         return self.x * other.y - self.y * other.x
 
 def dist(p, q):
-    return math.sqrt((p.x - q.x) ** 2 + (p.y - q.y) ** 2)
+    return (p.x - q.x) ** 2 + (p.y - q.y) ** 2
 
 def ccw(o, a, b):
     return (a - o).cross(b - o)
@@ -76,4 +76,4 @@ def rotating_calipers(points):
 C = inp()
 P = [Point(*map(int,input().split())) for _ in range(C)]
 
-print(rotating_calipers(P))
+print(sqrt(rotating_calipers(P)))
