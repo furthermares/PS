@@ -47,7 +47,7 @@ def convex_hull(points):
     return lower[:-1] + upper[:-1]
 
 def rotating_calipers(points):
-    hull = convex_hull(P)
+    hull = convex_hull(points)
     n = len(hull)
  
     # Base Cases
