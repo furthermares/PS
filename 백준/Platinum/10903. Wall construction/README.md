@@ -1,6 +1,6 @@
-# [번외]  - 12096
+# [Platinum V] Wall construction - 10903
 
-[문제 링크](https://www.acmicpc.net/problem/10906) 
+[문제 링크](https://www.acmicpc.net/problem/10903) 
 
 ### 성능 요약
 
