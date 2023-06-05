@@ -1,4 +1,4 @@
-# [번외] 달리기 코스 - 1310
+# [Platinum III] 달리기 코스 - 1310
 
 [문제 링크](https://www.acmicpc.net/problem/1310) 
 
