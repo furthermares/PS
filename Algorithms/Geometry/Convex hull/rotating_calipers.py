@@ -55,9 +55,9 @@ def rotating_calipers(points):
         return 0
     if n == 2:
         return dist(hull[0],hull[1])
-
-    k = 1
+    
     # Find the farthest vertex from hull[0] and hull[n-1]
+    k = 2
     while ccw(hull[n - 1], hull[0], hull[(k + 1) % n]) > ccw(hull[n - 1], hull[0], hull[k]):
         k += 1
  
