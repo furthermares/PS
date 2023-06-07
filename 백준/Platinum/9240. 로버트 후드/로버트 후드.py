@@ -27,36 +27,27 @@ def ccw(o, a, b):
      
 def convex_hull(points):
     points = sorted(set(points))
-    
-    if len(points) <= 1:
-        return points
         
     lower = []
     for p in points:
         while len(lower) >= 2 and ccw(lower[-2], lower[-1], p) <= 0:
             lower.pop()
         lower.append(p)
+    lower.pop()
 
     upper = []
     for p in points[::-1]:
         while len(upper) >= 2 and ccw(upper[-2], upper[-1], p) <= 0:
             upper.pop()
         upper.append(p)
+    upper.pop()
 
-    return lower[:-1] + upper[:-1]
+    return lower + upper
 
-def rotating_calipers(points):
-
-    def chk(a,b,c,d):
-        t = Point(b.x-a.x,b.y-a.y)
-        tt = Point(d.x - c.x, d.y - c.y)
-        return ccw(Point(0,0),t,tt)>=0
-    
+def rotating_calipers(points):    
     hull = convex_hull(points)
     n = len(hull)
-
-    if n == 1:
-        return 0
+    
     if n == 2:
         return dist(hull[0],hull[1])
 
