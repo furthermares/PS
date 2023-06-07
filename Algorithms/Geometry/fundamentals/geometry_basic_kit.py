@@ -4,6 +4,9 @@ class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
         
     def __lt__(self, other):
         return self.x < other.x if self.x != other.x else self.y < other.y
@@ -16,14 +19,18 @@ class Point:
 
     def dot(self, other):
         return self.x * other.x + self.y * other.y
+
+    def __hash__(self):
+        return hash((self.x, self.y))
         
     def __repr__(self):
-       return "({},{})".format(self.x, self.y)
+       return f"({self.x}, {self.y})"
 
 def dist(p, q):
     return sqrt((p.x - q.x) ** 2 + (p.y - q.y) ** 2)
 
-def distVE(E, A, B) :
+# Distance between a point and a line segment. For line, comment lines with dot product.
+def distVE(E, A, B):
     AB = B-A
     BE = E-B
     AE = E-A
