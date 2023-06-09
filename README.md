@@ -6,7 +6,7 @@
 ## Documented
 [[Diamond II] 27307. 페르마의 마지막 정리](백준/Diamond/27307. 페르마의 마지막 정리/explanation.md)
 
-## Algorithm library (adv~) (Ongoing)
+## Algorithm library (adv~) (ongoing)
 
 - Algebra
   - Fundamentals
