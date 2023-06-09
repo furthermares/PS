@@ -6,7 +6,7 @@
 ## Documented
 [[Diamond II] 27307. 페르마의 마지막 정리](백준/Diamond/27307. 페르마의 마지막 정리/explanation.md)
 
-## Algorithm library (adv~) (ongoing)
+## [Algorithm library](Algorithms) (adv~) (ongoing)
 
 - Algebra
   - Fundamentals
@@ -36,3 +36,5 @@
   - Convex hull
     - Convex hull construction (Monotone Chain)
     - Rotating Calipers
+
+## [TIL](TIL.md)
