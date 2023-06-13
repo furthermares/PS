@@ -1,6 +1,6 @@
-# Algorithm library (adv~) (ongoing)
+## Algorithm library (adv~) (ongoing)
 
-## Algebra
+- Algebra
   - Fundamentals
     - Modular Exponentiation
   - Prime numbers
@@ -9,13 +9,13 @@
   - Miscellaneous
     - Fast Fourier Transform
     - Number Theoretic Transform
-## Data Structures
+- Data Structures
   - Trees
     - Disjoint Set Union
-## String Processing
+- String Processing
   - Fundamentals
     - Knuth-Morris-Pratt (KMP)
-## Graphs
+- Graphs
   - Single-source shortest paths
     - Bellman-Ford
   - Spanning trees
@@ -24,7 +24,7 @@
     - Lowest Common Ancestor
   - Miscellaneous
     - Topological Sorting
-## Gememtry
+- Geometry
   - Fundamentals
     - CCW
     - Line segment intersection check
