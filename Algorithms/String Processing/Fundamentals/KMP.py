@@ -51,8 +51,8 @@ def computeLPS(p, lps):
             else:
                 length = lps[length-1]
 
-T = ins() # Text
-P = ins() # Pattern
+T = input() # Text
+P = input() # Pattern
 res = KMP(T, P)
 
 print(len(res))
