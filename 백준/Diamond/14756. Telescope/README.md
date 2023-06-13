@@ -1,4 +1,4 @@
-# [Platinum I] Telescope - 14756 
+# [Diamond V] Telescope - 14756 
 
 [문제 링크](https://www.acmicpc.net/problem/14756) 
 
