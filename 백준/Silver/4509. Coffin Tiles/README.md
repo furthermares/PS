@@ -1,4 +1,4 @@
-# [Silver IV] Coffin Tiles - 4509 
+# [Silver III] Coffin Tiles - 4509 
 
 [문제 링크](https://www.acmicpc.net/problem/4509) 
 
