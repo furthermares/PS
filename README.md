@@ -20,6 +20,9 @@
 - Data Structures
   - Trees
     - Disjoint Set Union
+- String Processing
+  - Fundamentals
+    - Knuth-Morris-Pratt (KMP)
 - Graphs
   - Single-source shortest paths
     - Bellman-Ford
