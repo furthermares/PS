@@ -7,7 +7,7 @@ def KMP(t, p): #text, pattern
     res = []
 
     # Preprocess the pattern (calculate lps[] array)
-    lps = computeLPS(p)
+    lps = fail(p)
 
     i = j = 0 # index for t[], p[]
     while i < lt:
@@ -29,7 +29,7 @@ def KMP(t, p): #text, pattern
 
     return res
 
-def computeLPS(p):
+def fail(p):
     n = len(p)
     # create lps[] that will hold the longest prefix suffix values for pattern
     lps = [0] * n
