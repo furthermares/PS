@@ -30,33 +30,21 @@ def KMP(t, p): #text, pattern
     return res
 
 def computeLPS(p):
-    length = 0 # length of the previous longest prefix suffix
-    
+    n = len(p)
     # create lps[] that will hold the longest prefix suffix values for pattern
-    lps = [0] * len(p)
-
-    i = 1
-    # the loop calculates lps[i] for i = 1 to len(p)-1
-    while i < len(p):
-        if p[length] == p[i]:
-            length += 1
-            lps[i] = length
-            i += 1
-        else:
-            # This is tricky. Consider the example. AAACAAAA and i = 7. The idea is similar to search step.
-            if length == 0:
-                lps[i] = 0
-                i += 1
-                
-                # Also, note that we do not increment i here
-            else:
-                length = lps[length-1]
-
+    lps = [0] * n
+    j = 0
+    for i in range(1, n):
+        while j > 0 and p[i] != p[j]:
+            j = lps[j - 1]
+        if p[i] == p[j]:
+            j += 1
+            lps[i] = j
     return lps
 
 T = input() # Text
 P = input() # Pattern
-res = KMP(T, P)
+lps = KMP(T, P)
 
-print(len(res))
-print(*res)
+print(len(lps))
+print(*lps)
