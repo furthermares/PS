@@ -7,7 +7,7 @@ def KMP(t, p): #text, pattern
     res = []
 
     # Preprocess the pattern (calculate lps[] array)
-    lps = computeLPS(p, lps)
+    lps = computeLPS(p)
 
     i = j = 0 # index for t[], p[]
     while i < lt:
