@@ -5,11 +5,9 @@ https://icpc.me/1786
 def KMP(t, p): #text, pattern
     lt, lp = len(t), len(p)
     res = []
-    # create lps[] that will hold the longest prefix suffix values for pattern
-    lps = [0] * lp
 
     # Preprocess the pattern (calculate lps[] array)
-    computeLPS(p, lps)
+    lps = computeLPS(p, lps)
 
     i = j = 0 # index for t[], p[]
     while i < lt:
@@ -31,8 +29,11 @@ def KMP(t, p): #text, pattern
 
     return res
 
-def computeLPS(p, lps):
+def computeLPS(p):
     length = 0 # length of the previous longest prefix suffix
+    
+    # create lps[] that will hold the longest prefix suffix values for pattern
+    lps = [0] * len(p)
 
     i = 1
     # the loop calculates lps[i] for i = 1 to len(p)-1
@@ -50,6 +51,8 @@ def computeLPS(p, lps):
                 # Also, note that we do not increment i here
             else:
                 length = lps[length-1]
+
+    return lps
 
 T = input() # Text
 P = input() # Pattern
