@@ -1,6 +1,8 @@
 input = __import__('sys').stdin.readline
 ins = lambda: input().rstrip()
 
+from collections import deque
+
 def fail(p):
     n = len(p)
     lps = [0] * n
@@ -19,7 +21,7 @@ def KMP(t, p):
     lps = fail(p)
     
     i = j = 0
-    j_his = [0]
+    j_his = deque([0])
     while i < lt:
         if t[i] == p[j]:
             i += 1
@@ -34,13 +36,13 @@ def KMP(t, p):
         
         if j == lp:
             t = t[:i - lp] + t[i:]
-            j_his = j_his[:-lp]
+            for _ in range(lp): j_his.pop()
             j = j_his[-1]
             lt -= lp
             i -= lp
 
     print(t)
-    
+
 S = ins()
 T = ins()
 
