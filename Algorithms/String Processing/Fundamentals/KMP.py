@@ -17,30 +17,24 @@ def fail(p):
 
 def KMP(t, p): #text, pattern
     lt, lp = len(t), len(p)
-    res = []
+    ret = []
 
     # Preprocess the pattern (calculate lps[] array)
     lps = fail(p)
-
-    i = j = 0 # index for t[], p[]
-    while i < lt:
-        if t[i] == p[j]:
-            i += 1
-            j += 1
-
-        # mismatch after j matches
-        else:
+    
+    j = 0 # index for p
+    for i in range(lt): # index for t
+        while j and t[i] != p[j]: # mismatch after j matches
             # Do not match lps[0..lps[j-1]] characters, they will match anyway
-            if j != 0:
-                j = lps[j-1]
-            else:
-                i += 1
-        
-        if j == lp:
-            res.append(i-j+1) #Found pattern at index i-j
             j = lps[j-1]
-
-    return res
+            
+        if t[i] == p[j]:
+            j += 1
+            if j == lp:
+                ret.append(i-j+1) # Found pattern at index i-j
+                j = lps[j-1]
+                
+    return ret
 
 T = input() # Text
 P = input() # Pattern
