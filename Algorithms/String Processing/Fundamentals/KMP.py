@@ -2,6 +2,19 @@
 https://icpc.me/1786
 """
 
+def fail(p):
+    n = len(p)
+    # create lps[] that will hold the longest prefix suffix values for pattern
+    lps = [0] * n
+    j = 0
+    for i in range(1, n):
+        while j and p[i] != p[j]:
+            j = lps[j - 1]
+        if p[i] == p[j]:
+            j += 1
+            lps[i] = j
+    return lps
+
 def KMP(t, p): #text, pattern
     lt, lp = len(t), len(p)
     res = []
@@ -28,19 +41,6 @@ def KMP(t, p): #text, pattern
             j = lps[j-1]
 
     return res
-
-def fail(p):
-    n = len(p)
-    # create lps[] that will hold the longest prefix suffix values for pattern
-    lps = [0] * n
-    j = 0
-    for i in range(1, n):
-        while j > 0 and p[i] != p[j]:
-            j = lps[j - 1]
-        if p[i] == p[j]:
-            j += 1
-            lps[i] = j
-    return lps
 
 T = input() # Text
 P = input() # Pattern
