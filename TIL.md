@@ -3,7 +3,7 @@
 ## Shortcuts
 - c++ print array
 ```cpp
-for (auto &i: fail) {
+for (auto &i: arr) {
     std::cout << i << ' ';
 }
 ```
