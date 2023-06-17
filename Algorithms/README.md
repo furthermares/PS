@@ -12,6 +12,7 @@
 - Data Structures
   - Trees
     - Disjoint Set Union
+    - Trie
 - String Processing
   - Fundamentals
     - Prefix function - Knuth-Morris-Pratt (KMP)
