@@ -1,4 +1,4 @@
-# [] 0 - 0
+# [] title - 0
 
 [문제 링크](https://www.acmicpc.net/problem/0) 
 
@@ -22,4 +22,4 @@
 
 <p></p>
 
-[0] Title: 0, Time: 0 ms, Memory: 0 KB -me
+[] Title: 0, Time: 0 ms, Memory: 0 KB -me
