@@ -1,5 +1,5 @@
 class TrieNode:
-    def __init__(self, *words):
+    def __init__(self, words = []):
         self.nodes: dict[str, TrieNode] = {} # Mapping from char to TrieNode
         self.is_leaf = False
         for word in words:
