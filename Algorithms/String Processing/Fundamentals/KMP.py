@@ -1,3 +1,4 @@
+# May need to go back to un-shortened version of KMP function. Maybe slower, test needed.
 """
 https://icpc.me/1786
 """
