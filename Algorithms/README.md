@@ -27,6 +27,7 @@
     - Topological Sorting
 - Geometry
   - Fundamentals
+    - basic kit
     - CCW
     - Line segment intersection check
   - Convex hull
