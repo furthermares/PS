@@ -6,6 +6,14 @@
 for (auto &i: arr) cout << i << ' ';
 ```
 
+# Python
+- `math.hypot()`
+```python
+# Euclidean distance
+# sqrt(x1*x1 + x2*x2 +x3*x3 .... xn*xn)
+math.hypot(x1, x2, x3, ..., xn)
+```
+
 # Algorithms
 ## Geometry
 ### Convex Hull
