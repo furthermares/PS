@@ -42,10 +42,10 @@ def distVE(E, A, B):
     return abs(AB.cross(AE)) / dist(A,B)
 
 def area(points):
-    ans = 0
+    ret = 0
     for i in range(len(points)):
-        ans += points[i].cross(points[i-1])
-    return abs(ans/2)
+        ret += points[i].cross(points[i-1])
+    return abs(ret/2)
 
 def ccw(o, a, b):
     return (a - o).cross(b - o)
