@@ -1,10 +1,13 @@
-(Finally made one. I've wanted to for a while. So many went past by there's no way I can retrieve them and note them down manually.)
-
 # Python
 ## Modules
-- `math.hypot(*coordinates)`: `sqrt(sum(x**2 for x in coordinates))`
+- `math.dist(p, q)`: Return the Euclidean distance between two points p and q, each given as a sequence (or iterable) of coordinates. The two points must have the same dimension. Roughly equivalent to:
 ```python
-# Euclidean distance
+sqrt(sum((px - qx) ** 2.0 for px, qx in zip(p, q)))
+```
+
+- `math.hypot(*coordinates)`: Return the Euclidean norm, `sqrt(sum(x**2 for x in coordinates))`. This is the length of the vector from the origin to the point given by the coordinates.
+```python
+# Euclidean norm
 # sqrt(x1*x1 + x2*x2 +x3*x3 .... xn*xn)
 math.hypot(x1, x2, x3, ..., xn)
 ```
