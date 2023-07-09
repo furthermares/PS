@@ -1,5 +1,11 @@
 # Python
-## Modules
+## Module
+### built-in module
+- `int(n, base)`: `n` can be a string, and also doesn't have to be in a proper base format.
+```Python
+print(int("101", 2)) # 5
+```
+### `math` module
 - `math.dist(p, q)`: Return the Euclidean distance between two points p and q, each given as a sequence (or iterable) of coordinates. The two points must have the same dimension. Roughly equivalent to:
 ```python
 sqrt(sum((px - qx) ** 2.0 for px, qx in zip(p, q)))
