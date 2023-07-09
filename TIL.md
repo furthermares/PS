@@ -28,4 +28,4 @@ for (auto &i: arr) cout << i << ' ';
 # Algorithms
 ## Geometry
 ### Convex Hull
-- Number of vertices(range: N) in Convex Hull is ~O(N^(2/3))
+- Number of vertices(range: N) in Convex Hull is $\sim O(N^{\frac{2}{3}})$
