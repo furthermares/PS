@@ -21,7 +21,7 @@ filtered_data = [y for x in data if (y := f(x)) is not None]
 ```
 
 ## Module
-### built-in module
+### built-in modules
 
 - `int(n, base)`: `n` can be a string, and also doesn't have to be in a proper base format.
 ```Python
