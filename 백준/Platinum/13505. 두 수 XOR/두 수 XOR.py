@@ -36,9 +36,7 @@ A = inl()
 
 root = TrieNode()
 
-for i in range(N):
-    a = A[i]
-    
+for i in range(N):    
     A[i] = bin(A[i])[2:]
     A[i] = "0" * (MAX_LEN_N - len(A[i])) + A[i]
     
