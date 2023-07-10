@@ -1,5 +1,7 @@
 # Python
-## New features
+## Syntax
+
+- `A = [input() for _ in range(int(input()))]` works in a single line, as the latter `input()` goes first.
 
 - `:=` (walrus) operator: Assignment exprsesion operator. (New in Python 3.8)
 ```Python
@@ -49,7 +51,7 @@ sqrt(sum((px - qx) ** 2.0 for px, qx in zip(p, q)))
 math.hypot(x1, x2, x3, ..., xn)
 ```
 
-- `math.factorial(n)`: First, it exists. Accepts only nonneg ints. No negatives and floats including e.g. (3.0).
+- `math.factorial(n)`: Accepts only a nonneg int. No negatives and floats including e.g. (3.0).
 
 ## Shortcuts
 
@@ -61,4 +63,4 @@ for (auto &i: arr) cout << i << ' ';
 # Algorithms
 ## Geometry
 ### Convex Hull
-- Number of vertices(range: N) in Convex Hull is $\sim O(N^{\frac{2}{3}})$
+- Number of vertices(range: $N$) in Convex Hull is $\sim O(N^{\frac{2}{3}})$
