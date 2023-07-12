@@ -97,7 +97,7 @@ class RadixNode:
 
                     return True
 
-    def print_tree(self, height: int = 0) -> None:
+    def print_tree(self, height = 0):
         if self.prefix != "":
             print("-" * height, self.prefix, "  (leaf)" if self.is_leaf else "")
 
