@@ -108,6 +108,6 @@ class RadixNode:
 
         return print_lst
 
-    def __repr__(self):
+    def __repr__(self): # trick. Doesn't actually do what it's supposed to do.
         self.print_tree()
-        return "" # trick. Doesn't actually do what it's supposed to do.
+        return ""
