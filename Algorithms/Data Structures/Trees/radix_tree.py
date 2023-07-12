@@ -1,4 +1,3 @@
-# WIP
 # https://github.com/TheAlgorithms/Python/blob/master/data_structures/trie/radix_tree.py
 
 class RadixNode:
@@ -98,12 +97,12 @@ class RadixNode:
 
                     return True
 
-    def __repr__(self, height = 0):
-        print_lst = ""
-        
+    def print_tree(self, height: int = 0) -> None:
         if self.prefix != "":
-            print_lst.append("-" * height, self.prefix, "  (leaf)" if self.is_leaf else "")
+            print("-" * height, self.prefix, "  (leaf)" if self.is_leaf else "")
 
+        for value in self.nodes.values():
+            value.print_tree(height + 1)
         for value in self.nodes.values():
             value.print_tree(height + 1)
 
