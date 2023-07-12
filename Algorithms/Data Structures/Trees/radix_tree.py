@@ -107,3 +107,7 @@ class RadixNode:
             value.print_tree(height + 1)
 
         return print_lst
+
+    def __repr__(self):
+        self.print_tree()
+        return "" # trick. Doesn't actually do what it's supposed to do.
