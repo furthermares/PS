@@ -13,6 +13,7 @@
   - Trees
     - Disjoint Set Union
     - Trie
+      - Radix Tree
 - String Processing
   - Fundamentals
     - Prefix function - Knuth-Morris-Pratt (KMP)
