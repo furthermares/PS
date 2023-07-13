@@ -37,6 +37,26 @@ result = list(filter(lambda x: is_multiple_of_3(x), numbers))
 print(result) # [3, 6, 9]
 ```
 
+- `str.zfill(length)`
+  - Parameters:  length: length is the length of the returned string from zfill() with ‘0’ digits filled to the leftside. 
+  - Return:  Returns a copy of the string with ‘0’ characters padded to the left side of the given string.
+```Python
+text = "abcdefghijklmno"
+print(text.zfill(25)) # 0000000000abcdefghijklmno
+print(text.zfill(20)) # 00000abcdefghijklmno
+print(text.zfill(10)) # abcdefghijklmno
+
+# with Sign Prefix
+number = "6041"
+print(number.zfill(8)) # 00006041
+
+number = "+6041"
+print(number.zfill(8)) # +0006041
+
+text = "--anything%(&%(%)*^"
+print(text.zfill(20)) # -0-anything%(&%(%)*^
+```
+    
 ### `math` module
 
 - `math.dist(p, q)`: Return the Euclidean distance between two points p and q, each given as a sequence (or iterable) of coordinates. The two points must have the same dimension. Roughly equivalent to:
