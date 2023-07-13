@@ -4,8 +4,6 @@ inl = lambda: list(map(int,input().split()))
 
 from collections import OrderedDict
 
-MAX_LEN_N = 31 # log2(MAX_N)
-
 class RadixNode:
     def __init__(self, prefix: str = "", is_leaf: bool = False):
         self.nodes = {}
@@ -84,10 +82,11 @@ for _ in range(inp()):
     A = remove_duplicates(A)
 
     root = RadixNode()
-    
+
+    max_len = len(bin(max(A))) - 2
     for i in range(len(A)):
         A[i] = bin(A[i])[2:]
-        A[i] = "0" * (MAX_LEN_N - len(A[i])) + A[i]
+        A[i] = "0" * (max_len - len(A[i])) + A[i]
         
         root.insert(A[i])
 
