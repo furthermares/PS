@@ -1,7 +1,7 @@
 # https://github.com/TheAlgorithms/Python/blob/master/data_structures/trie/radix_tree.py
 
 class RadixNode:
-    def __init__(self, prefix: str = "", is_leaf: bool = False):
+    def __init__(self, prefix = "", is_leaf = False):
         self.nodes = {}
         self.is_leaf = is_leaf
         self.prefix = prefix
