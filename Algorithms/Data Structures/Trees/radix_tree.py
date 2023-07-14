@@ -19,7 +19,7 @@ class RadixNode:
             self.insert(word)
 
     def insert(self, word):            
-        if self.prefix == word:
+        if self.prefix == word and self.is_leaf == False:
             self.is_leaf = True
             
         elif word[0] not in self.nodes:
