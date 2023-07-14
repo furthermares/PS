@@ -1,4 +1,5 @@
-# https://github.com/TheAlgorithms/Python/blob/master/data_structures/trie/radix_tree.py
+# Original from https://github.com/TheAlgorithms/Python/blob/master/data_structures/trie/radix_tree.py
+# However it's wrong. See line 23.
 
 class RadixNode:
     def __init__(self, prefix = "", is_leaf = False):
