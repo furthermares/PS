@@ -1,3 +1,10 @@
+# Problem Solving
+- TLE? PyPy. **MLE? Python.**
+- c++ print array code
+```cpp
+for (auto &i: arr) cout << i << ' ';
+```
+
 # Python
 ## Syntax
 
@@ -72,13 +79,6 @@ math.hypot(x1, x2, x3, ..., xn)
 ```
 
 - `math.factorial(n)`: Accepts only a nonneg int. No negatives and floats including e.g. (3.0).
-
-## Shortcuts
-
-- c++ print array
-```cpp
-for (auto &i: arr) cout << i << ' ';
-```
 
 # Algorithms
 ## Geometry
