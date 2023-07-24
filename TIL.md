@@ -35,6 +35,18 @@ filtered_data = [y for x in data if (y := f(x)) is not None]
 print(int("101", 2)) # 5
 ```
 
+- `list.sort(key=len)`: Input type for `key` argument is function, hence why lambda is often used. `len` is a function.
+
+- `next(iterator, default)`: Retrieve the next item from the iterator by calling its `__next__()` method.
+  - `default`: Returns the value if the iterator is exhausted, otherwise StopIteration is raised.
+```python
+A = iter([5, 9])
+print(next(A, '-1')) # 5
+print(next(A, '-1')) # 9
+print(next(A, '-1')) # -1
+```
+
+
 - `filter(function, sequence)`
   - `function`: function that tests if each element of a sequence is true or not.
   - `sequence`: sequence which needs to be filtered, it can be sets, lists, tuples, or containers of any iterators.
