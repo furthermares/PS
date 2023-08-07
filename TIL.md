@@ -58,6 +58,8 @@ result = list(filter(lambda x: is_multiple_of_3(x), numbers))
 print(result) # [3, 6, 9]
 ```
 
+- `string.ascii_uppercase`: `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`
+
 - `str.zfill(length)`
   - Parameters:  length: length is the length of the returned string from zfill() with ‘0’ digits filled to the leftside. 
   - Return:  Returns a copy of the string with ‘0’ characters padded to the left side of the given string.
