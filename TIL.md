@@ -5,6 +5,7 @@
 for (auto &i: arr) cout << i << ' ';
 ```
 - The speed of `while i > 0:` and `while i != 0:` are negligible.
+- `print(1) if ans else print(0)` == `print(int(ans))`
 
 # Python
 ## Syntax
