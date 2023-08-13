@@ -42,6 +42,7 @@ while chunk := file.read(8192):
 # Share a subexpression between a comprehension filter clause and its output
 filtered_data = [y for x in data if (y := f(x)) is not None]
 ```
+- `1 == 1 == 1 # True`
 
 ## Module
 ### built-in modules
