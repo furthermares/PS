@@ -1,7 +1,11 @@
-delta = ((-1,-1),(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0))
-
 N = int(input())
-M = [list(input()) for _ in range(N)]
+
+# Case 2
+import sys
+input = sys.stdin.readline
+M = [list(input().rstrip()) for _ in range(N)]
+
+delta = ((-1,-1),(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0))
 
 ans = 0
 if N > 4:
