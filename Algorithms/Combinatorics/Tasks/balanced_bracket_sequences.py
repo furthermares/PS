@@ -24,7 +24,7 @@ for i in range(1, N+2):
     for j in range(i, N+2):
         dp[i][j] = dp[i][j-1] + dp[i-1][j]
 
-x = N+1
+x = N
 y = N+1
 ans = ""
 if K > dp[x][y]:
