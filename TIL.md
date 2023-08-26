@@ -116,3 +116,7 @@ math.hypot(x1, x2, x3, ..., xn)
 ## Geometry
 ### Convex Hull
 - Number of vertices(range: $N$) in Convex Hull is $\sim O(N^{\frac{2}{3}})$
+
+## Combinatorics
+### Balanced bracket sequences (`()(())`)
+- Catalan numbers
