@@ -17,6 +17,9 @@
 - String Processing
   - Fundamentals
     - Prefix function - Knuth-Morris-Pratt (KMP)
+- Combinatorics
+  - Tasks
+    - Balanced bracket sequences
 - Graphs
   - Single-source shortest paths
     - Bellman-Ford
