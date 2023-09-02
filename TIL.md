@@ -11,15 +11,22 @@ l = []
 for x in range(1000000):
   l.append(x)
 ```
-- [`+=` string concatenation](https://doc.pypy.org/en/latest/cpython_differences.html#performance-differences): 
+- [`+=` string concatenation](https://doc.pypy.org/en/latest/cpython_differences.html#performance-differences): Slow because strings are immutable? It's linear now although brittle. PyPy is still quadratic. It's still better to use `"".join(parts)`.
 
-Slow because strings are immutable? It's linear now although brittle. PyPy is still quadratic. It's still better to use `"".join(parts)`.
-
-- https://codeforces.com/blog/entry/21851#comment-265395 ? Test it in the future.
+- https://codeforces.com/blog/entry/21851#comment-265395 
 - The speed of `while i > 0:` and `while i != 0:` are negligible.
 - `print(1) if ans else print(0)` == `print(int(ans))`
 - TLE? PyPy. MLE? Python.
 - c++ print array code: `for (auto &i: arr) cout << i << ' ';`
+- Multi-line input
+  - ```python
+    try:
+        While True:
+            input()
+    except:
+        exit()
+    ```
+  - `sys.stdin.readlines()`
 
 # Python
 ## Syntax
