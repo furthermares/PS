@@ -51,6 +51,7 @@ filtered_data = [y for x in data if (y := f(x)) is not None]
 ```
 - `1 == 1 == 1 # True`
 
+- `r"text"`: Raw string
 ## Module
 ### built-in modules
 
