@@ -104,7 +104,7 @@ text = "--anything%(&%(%)*^"
 print(text.zfill(20)) # -0-anything%(&%(%)*^
 ```
     
-### `math` module
+### `math`
 
 - `math.dist(p, q)`: Return the Euclidean distance between two points p and q, each given as a sequence (or iterable) of coordinates. The two points must have the same dimension. Roughly equivalent to:
 ```python
@@ -119,6 +119,10 @@ math.hypot(x1, x2, x3, ..., xn)
 ```
 
 - `math.factorial(n)`: Accepts only a nonneg int. No negatives and floats including e.g. (3.0).
+
+### `re`
+
+- `string.startswith()` and `string.endswith()` are faster than `regex`.
 
 # Algorithms
 ## Geometry
