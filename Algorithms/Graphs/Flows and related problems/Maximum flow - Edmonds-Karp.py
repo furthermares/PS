@@ -2,9 +2,16 @@
 
 # uses adjacency matrix representation
 
-# Returns true if there is a path from source 's' to sink 't' in residual graph.
-# Also fills parent[] to store the path
-def BFS(S, T, parent):
+# Returns the maximum flow from s to t in the given graph
+def edmonds_karp(S, T):
+    
+    # This array is filled by BFS and to store path
+    parent = [-1]*len(G)
+    max_flow = 0 # There is no flow initially
+
+	# Returns true if there is a path from source 's' to sink 't' in residual graph.
+	# Also fills parent[] to store the path
+	def BFS(S, T, parent):
 
     # Mark all the vertices as not visited
     visited = [False] * len(G)
@@ -37,16 +44,7 @@ def BFS(S, T, parent):
 
     # We didn't reach sink in BFS starting from source, so return False.
     return False
-			
 	
-# Returns the maximum flow from s to t in the given graph
-def FordFulkerson(S, T):
-    
-    # This array is filled by BFS and to store path
-    parent = [-1]*len(G)
-
-    max_flow = 0 # There is no flow initially
-
     # Augment the flow while there is path from S to T
     while BFS(S, T, parent):
 
@@ -80,4 +78,4 @@ G = [[0, 16, 13, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0]]
 source = 0; sink = 5
 
-print("The maximum possible flow is %d " % FordFulkerson(source, sink))
+print("The maximum possible flow is %d " % edmonds_karp(source, sink))
