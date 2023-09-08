@@ -27,6 +27,8 @@
     - Kruskal
   - Lowest Common Ancestor
     - Lowest Common Ancestor
+  - Flows and related problems
+    - Maximum flow - Edmonds-Karp
   - Miscellaneous
     - Topological Sorting
 - Geometry
