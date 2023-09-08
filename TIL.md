@@ -13,7 +13,12 @@ for x in range(1000000):
 ```
 - [`+=` string concatenation](https://doc.pypy.org/en/latest/cpython_differences.html#performance-differences): Slow because strings are immutable? It's linear now although brittle. PyPy is still quadratic. It's still better to use `"".join(parts)`.
 
-- https://codeforces.com/blog/entry/21851#comment-265395 
+- Wrapping the code into a function reduces the size of the namepsace interpreter has to keep during the runtime.
+```python
+def main():
+    pass
+main()
+```
 - The speed of `while i > 0:` and `while i != 0:` are negligible.
 - `print(1) if ans else print(0)` == `print(int(ans))`
 - TLE? PyPy. MLE? Python.
