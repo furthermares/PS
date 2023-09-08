@@ -48,7 +48,7 @@ def FordFulkerson(S, T):
     max_flow = 0 # There is no flow initially
 
     # Augment the flow while there is path from S to T
-    while BFS(S, T, parent) :
+    while BFS(S, T, parent):
 
         # Find minimum residual capacity of the edges along the path filled by BFS.
         # Or we can say find the maximum flow through the path found.
