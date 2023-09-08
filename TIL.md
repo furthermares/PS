@@ -13,7 +13,7 @@ for x in range(1000000):
 ```
 - [`+=` string concatenation](https://doc.pypy.org/en/latest/cpython_differences.html#performance-differences): Slow because strings are immutable? It's linear now although brittle. PyPy is still quadratic. It's still better to use `"".join(parts)`.
 
-- Wrapping the code into a function reduces the size of the namepsace interpreter has to keep during the runtime.
+- Wrapping the code into a function reduces the size of the namepsace interpreter has to keep during the runtime. (Global var to Local var)
 ```python
 def main():
     pass
