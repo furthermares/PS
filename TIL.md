@@ -139,3 +139,8 @@ math.hypot(x1, x2, x3, ..., xn)
 ## Combinatorics
 ### Balanced bracket sequences
 - Catalan numbers
+
+## Graphs
+### Flows and related problems
+#### Maximum flow - Edmonds-Karp
+- Time complexity: $min(Ef, VE^2)$
