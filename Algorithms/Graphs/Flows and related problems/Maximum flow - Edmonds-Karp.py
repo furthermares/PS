@@ -6,7 +6,7 @@
 def edmonds_karp(S, T):
     
     # This array is filled by BFS and to store path
-    parent = [-1]*len(G)
+    parent = [-1] * len(G)
     max_flow = 0 # There is no flow initially
 
 	# Returns true if there is a path from source 's' to sink 't' in residual graph.
@@ -17,10 +17,9 @@ def edmonds_karp(S, T):
     visited = [False] * len(G)
 
     # Create a queue for BFS
-    q = []
+    q = [S]
 
     # Mark the source node as visited and enqueue it
-    q.append(S)
     visited[S] = True
 
     # Standard BFS Loop
