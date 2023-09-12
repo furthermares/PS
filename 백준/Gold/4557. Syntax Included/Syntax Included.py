@@ -10,7 +10,7 @@ for _ in range(inp()):
     S = ins()
 
     if S.startswith("<HTML><BODY>") and S.endswith("</BODY></HTML>"):
-        S = S[len("<HTML><BODY>"):-len("</BODY></HTML>")]
+        S = S[12:-14]
         while re.search(p, S):
             S = re.sub(p, r"\1\2\3", S)
 
