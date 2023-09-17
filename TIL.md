@@ -11,6 +11,7 @@ l = []
 for x in range(1000000):
   l.append(x)
 ```
+
 - [`+=` string concatenation](https://doc.pypy.org/en/latest/cpython_differences.html#performance-differences): Slow because strings are immutable? It's linear now although brittle. PyPy is still quadratic. It's still better to use `"".join(parts)`.
 
 - Wrapping the code into a function reduces the size of the namepsace interpreter has to keep during the runtime. (Global var to Local var)
@@ -19,10 +20,15 @@ def main():
     pass
 main()
 ```
+
 - The speed of `while i > 0:` and `while i != 0:` are negligible.
+
 - `print(1) if ans else print(0)` == `print(int(ans))`
+
 - TLE? PyPy. MLE? Python.
+
 - c++ print array code: `for (auto &i: arr) cout << i << ' ';`
+
 - Multi-line input
   - ```python
     try:
@@ -35,7 +41,6 @@ main()
 
 # Python
 ## Syntax
-
 - `A = [input() for _ in range(int(input()))]` works in a single line, as the latter `input()` goes first.
 
 - `:=` (walrus) operator: Assignment exprsesion operator. (New in Python 3.8)
@@ -59,6 +64,9 @@ filtered_data = [y for x in data if (y := f(x)) is not None]
 - `r"text"`: Raw string
 
 - `True + 0 == 1`, `False + 0 == 0`
+
+- Return 0 if negative: `max(x, 0)`
+
 ## Module
 ### built-in modules
 
