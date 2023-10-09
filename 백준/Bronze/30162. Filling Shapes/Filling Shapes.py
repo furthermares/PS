@@ -1,0 +1,1 @@
+N=int(input());print(0if N&1else 1<<(N>>1))
