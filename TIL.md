@@ -67,6 +67,8 @@ filtered_data = [y for x in data if (y := f(x)) is not None]
 
 - Return 0 if negative: `max(x, 0)`
 
+- `.5` == `0.5`
+
 ## Module
 ### built-in modules
 
