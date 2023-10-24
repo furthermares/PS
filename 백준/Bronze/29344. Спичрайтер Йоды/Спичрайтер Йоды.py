@@ -1,0 +1,1 @@
+for s in (S:=input().split(".")[:-1]):print(*s.split()[::-1],end=".\n")
