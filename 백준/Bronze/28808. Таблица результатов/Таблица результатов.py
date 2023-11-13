@@ -1,0 +1,1 @@
+print(sum("+"in input()for _ in range(int(input().split()[0]))))
