@@ -154,3 +154,8 @@ math.hypot(x1, x2, x3, ..., xn)
 ### Flows and related problems
 #### Maximum flow - Edmonds-Karp
 - Time complexity: $min(Ef, VE^2)$
+
+# Code Golf
+- `for _ in range(N)` → `for _ in[0]*N`
+- `int(True)` → `+True`
+- `N+1` → `-~n`, `N-1` → `~-n`
