@@ -156,6 +156,7 @@ math.hypot(x1, x2, x3, ..., xn)
 - Time complexity: $min(Ef, VE^2)$
 
 # Code Golf
+- `info = list(map(lambda x : (x[0], int(x[1])), [input().split() for _ in range(int(input()))]))`
 - `for _ in range(N)` → `for _ in[0]*N`
 - `int(True)` → `+True`
 - `N+1` → `-~n`, `N-1` → `~-n`
