@@ -1,6 +1,6 @@
 M=1001;S=M*M;f=[0]*S;a=[0]*M
 p=1
-while p*p<S:
+while p*p<=S+1:
  for i in range(p*p,S,p):f[i]+=1
  p+=1
 for i in range(S):
