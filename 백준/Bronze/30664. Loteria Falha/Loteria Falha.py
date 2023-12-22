@@ -1,0 +1,1 @@
+while N:=int(input()):print("TENTE NOVAMENTE"if N%42else"PREMIADO")
