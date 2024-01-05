@@ -1,0 +1,1 @@
+for _ in[0]*int(input()):A,B,N=map(int,input().split());print([A-B,A,B,B-A,-A,-B][N%6]%1000000007)
