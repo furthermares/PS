@@ -1,0 +1,5 @@
+I=lambda:sorted([*map(int,input().split())])
+I()
+A,B=I(),I()
+x=min(len(A),len(B))
+print(x,sum(A[-i-1]*B[-i-1]for i in range(x)))
