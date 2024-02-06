@@ -1,0 +1,1 @@
+print(("GOOD","TOO LATE")[input()>"2023-09-16"])
