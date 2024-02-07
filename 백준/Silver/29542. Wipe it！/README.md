@@ -26,7 +26,7 @@
 
 ### 입력 
 
- <p>The input file contains a single line --- the word teacher thought of. It consists of lowercase English letters and it's length does not exceed <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1000</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$1000$</span></mjx-container> characters.</p>
+ <p>The input file contains a single line --- the word teacher thought of. It consists of lowercase English letters and it's length does not exceed $1000$ characters.</p>
 
 ### 출력 
 
