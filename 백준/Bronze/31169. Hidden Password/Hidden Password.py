@@ -1,0 +1,1 @@
+[print("".join(chr((ord(c)-84)%26+97)for c in input()))for _ in[0]*int(input())]
