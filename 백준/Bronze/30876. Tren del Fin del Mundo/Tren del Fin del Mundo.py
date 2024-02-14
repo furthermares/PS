@@ -1,0 +1,1 @@
+print(*min([*map(int,input().split())][::-1]for _ in[0]*int(input()))[::-1])
