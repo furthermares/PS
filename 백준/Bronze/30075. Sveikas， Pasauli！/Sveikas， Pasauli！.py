@@ -1,0 +1,1 @@
+print("".join(input()[12:-1]for _ in[0]*int(input())).replace("\\n","\n"))
