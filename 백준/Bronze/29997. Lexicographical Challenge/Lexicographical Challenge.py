@@ -1,10 +1,5 @@
-input=__import__('sys').stdin.readline
-S=input().rstrip()
+S=input()
 N=int(input())
-
-v=[]
-for i in range(N):
-    v.append(sorted(S[i::N]))
+v=[sorted(S[i::N])for i in range(N)]
 l=len(v)
-for i in range(len(S)):
-    print(v[i%l][i//l],end="")
+print("".join(v[i%l][i//l]for i in range(len(S))))
