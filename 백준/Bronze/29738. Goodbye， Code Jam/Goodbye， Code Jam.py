@@ -1,0 +1,1 @@
+for i in range(int(input())):r=int(input());print(f"Case #{i+1}:","Round 1"if r>4500else"Round 2"if r>1000else"Round 3"if r>25else"World Finals")
