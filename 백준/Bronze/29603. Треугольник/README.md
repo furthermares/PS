@@ -24,7 +24,7 @@
 
 ### 입력 
 
- <p>В трех строках входного файла заданы по два целых числа, не превосходящих <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1000</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$1000$</span></mjx-container> по абсолютной величине --- координаты середин сторон треугольника. Данные три точки не лежат на одной прямой.</p>
+ <p>В трех строках входного файла заданы по два целых числа, не превосходящих $1000$ по абсолютной величине --- координаты середин сторон треугольника. Данные три точки не лежат на одной прямой.</p>
 
 ### 출력 
 
