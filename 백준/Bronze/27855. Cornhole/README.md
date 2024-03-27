@@ -18,7 +18,7 @@
 
 <p>Cornhole is a popular game in which players take turns throwing bean bags at an angled board with a hole in its far end. The object is to score points by either landing a bag on the board (one point) or getting the bag in the hole (three points).</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/15eeb681-12ff-4cac-8118-1c9bb2530070/-/preview/" style="width: 247px; height: 236px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 247px; height: 236px;"></p>
 
 <p style="text-align: center;">(<a href="https://www.playcornhole.org/pages/rules">https://www.playcornhole.org/pages/rules</a>)</p>
 
