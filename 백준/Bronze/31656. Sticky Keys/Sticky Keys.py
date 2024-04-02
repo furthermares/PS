@@ -1,4 +1,2 @@
-S=input()
-print(S[0],end="")
-for i in range(1,len(S)):
-    if S[i-1]!=S[i]:print(S[i],end="")
+S=input()+" "
+print("".join(S[i]for i in range(len(S)-1)if S[i]!=S[i+1]))
