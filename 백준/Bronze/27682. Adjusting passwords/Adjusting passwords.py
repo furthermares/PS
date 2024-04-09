@@ -1,19 +1,8 @@
-for _ in[0]*int(input()):
-    input()
-    P,Q=input(),input()
-
-    if P==Q:
-        print("*")
-        continue
-
-    for i in range(min(len(P),len(Q))):
-        if P[i]!=Q[i]:
-            idx=i
-            break
-    else:
-        idx=min(len(P),len(Q))
-        
-    if(len(Q)>idx*2):
-        print(f"*{P}*")
-    else:
-        print("<"*(len(Q)-idx)+P[idx:]+"*")
+I=input
+for _ in[0]*int(I()):
+ I();P,Q=I(),I();p,q=len(P),len(Q)
+ if P==Q:print("*");continue
+ for i in range(r:=min(p,q)):
+  if P[i]!=Q[i]:x=i;break
+ else:x=r
+ print(f"*{P}*"if(q>x*2)else"<"*(q-x)+P[x:]+"*")
