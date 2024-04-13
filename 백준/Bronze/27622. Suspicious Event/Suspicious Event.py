@@ -1,11 +1,7 @@
-N=int(input())
-A=[*map(int,input().split())]
+input()
 x=0
-
-chk=set()
-for a in A:
-    if a>0:chk.add(a)
-    else:
-        if -a not in chk:x+=1
-
+S=set()
+for a in map(int,input().split()):
+ if a>0:S.add(a)
+ else:x+=-a not in S
 print(x)
