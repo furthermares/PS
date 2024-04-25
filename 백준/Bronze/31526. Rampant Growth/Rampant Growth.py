@@ -1,2 +1,2 @@
 R,C=map(int,input().split())
-print(R*(R-1)**(C-1)%998244353)
+print(R*(~-R)**~-C%998244353)
