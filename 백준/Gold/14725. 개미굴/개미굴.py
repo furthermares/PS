@@ -5,7 +5,7 @@ __import__('sys').setrecursionlimit(10**6)
 
 class TrieNode:
     def __init__(self, words = []):
-        self.nodes: dict[str, TrieNode] = {} # Mapping from char to TrieNode
+        self.nodes: dict[str, TrieNode] = {}
         self.is_leaf = False
         for word in words:
             self.insert(word)
