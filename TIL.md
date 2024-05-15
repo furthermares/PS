@@ -21,9 +21,11 @@ def main():
 main()
 ```
 
-- `if i in list(L)` < `if i in set(L)`. Set uses hash lookup.
+- `if i in set(L)` < `if i in list(L)`. Set uses hash lookup.
 
 - The speed of `while i > 0:` and `while i != 0:` are negligible.
+
+- `if oftenTrueCondition and rarelyTrueCondition` < `if rarelyTrueCondition and oftenTrueCondition`
 
 - `print(1) if ans else print(0)` == `print(int(ans))`
 
