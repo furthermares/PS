@@ -55,4 +55,6 @@ print(edmonds_karp(s,e))
 5 4 1
 4 2 1
 
+# Output
+2
 """
