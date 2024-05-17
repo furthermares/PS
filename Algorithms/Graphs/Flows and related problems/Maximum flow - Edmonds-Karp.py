@@ -1,12 +1,17 @@
 from collections import deque
 
+def add_edge(u,v,c=1):
+    E[u].append(v)
+    E[v].append(u)
+    C[u][v] = c
+
 def edmonds_karp(s,e):
     max_flow = 0
     
     while True:
         parent = [-1]*(N+1)
         q = deque([s])
-        while q:
+        while q and parent[e] == -1:
             cur = q.popleft()
             for nxt in E[cur]:
                 if C[cur][nxt] - F[cur][nxt] > 0 and parent[nxt] == -1:
@@ -39,10 +44,7 @@ s,e = 1,2				# source, sink
 
 for _ in range(M):
     f,t,b = inm()			# from, to, value
-    f,t = inm()
-    E[f].append(t)
-    E[t].append(f)
-    C[f][t] += b
+    add_edge(f,t,b)
 
 print(edmonds_karp(s,e))
 
