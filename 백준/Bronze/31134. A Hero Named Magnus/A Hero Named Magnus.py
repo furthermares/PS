@@ -1,0 +1,1 @@
+[print(int(input())*2-1)for _ in[0]*int(input())]
