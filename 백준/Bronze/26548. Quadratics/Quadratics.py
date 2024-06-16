@@ -1,0 +1,1 @@
+for _ in[0]*int(input()):A,B,C=map(float,input().split());t=(B*B-4*A*C)**.5;print(f"{(t-B)/2/A:.3f}, {(-t-B)/2/A:.3f}")
